@@ -1,13 +1,13 @@
 (function($) {
   
-  alert('Ready to export your haves');
+  console.log('Ready to export your haves');
   
   var doExport = function(){
-    alert('exporting');
+    console.log('exporting');
   };
   
   var expandMore = function() {
-    $more = $(":contains('LOAD MORE')");
+    var $more = $(":contains('LOAD MORE')");
     if($more.length == 0) {
       doExport();
       return;
