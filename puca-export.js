@@ -7,7 +7,7 @@
   };
   
   var expandMore = function() {
-    var $more = $(":contains('LOAD MORE')");
+    var $more = $("a:contains('LOAD MORE')");
     if($more.length == 0) {
       doExport();
       return;
