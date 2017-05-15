@@ -13,7 +13,7 @@
       return;
     }
     $more.click();
-    setTimeout(this, 3000);
+    setTimeout(expandMore, 3000);
   };
   
   expandMore();
