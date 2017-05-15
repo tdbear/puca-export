@@ -1,6 +1,6 @@
 (function($) {
   
-  console.log('Ready to export your haves');
+  alert('Ready to export your haves');
   
   var doExport = function(){
     console.log('exporting');
