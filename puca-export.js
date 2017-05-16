@@ -7,6 +7,7 @@
     
     var $cards = $('.item.clear');
     
+    var cards = [];
     for (var i=1; i<$cards.length; i++) {
         var $card = $($cards[i]);
       
@@ -19,8 +20,12 @@
           condition: $card.find('.condition select option:selected').text()
         };
       
-        console.log(card);
+        cards.push(card);
     }
+    
+    var countedCards = _.countBy(cards, function(c){ return c; });
+    console.log(countedCards);
+    
     
   };
   
