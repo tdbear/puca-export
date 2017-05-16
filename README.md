@@ -2,7 +2,7 @@
 Cleint-side JavaScript tool to export cards from Pucatrade.com to CSV file.
 The exported file is suitable for import into Cardsphere.com
 
-# Instructions
+# Instructions to export HAVES
 
 1. Use Chrome browser to create a bookmark with the following URL:
 
