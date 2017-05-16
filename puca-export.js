@@ -35,7 +35,7 @@
       csv = csv + '\n' + row.join('\t');
     }
     
-    $('a',{
+    $('<a/>',{
       href:'data:text/csv;charset=utf-8,' + escape(csv)
     }).css({
       class:'btn',
