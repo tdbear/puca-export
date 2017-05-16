@@ -36,12 +36,13 @@
     }
     
     $('<a/>',{
-      href:'data:text/csv;charset=utf-8,' + escape(csv)
+      href:'data:text/csv;charset=utf-8,' + escape(csv),
+      class: 'btn'
     }).css({
-      class:'btn',
       position: 'fixed',
-      left: 0,
-      top: 0
+      left: '20px',
+      top: '20px',
+      'z-index': 100
     }).text('Download .CSV').appendTo($('body'));
     
   };
