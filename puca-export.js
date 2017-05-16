@@ -5,7 +5,7 @@
       + 'A download button will appear in the top left corenr of the screen when done.');
   
   var conditionMap = {
-    'M/NM': 'Near Mint',
+    'NM/M': 'Near Mint',
     'SP': 'Slightly Played',
     'MP': 'Moderately Played',
     'HP': 'Heavily Played'
