@@ -27,8 +27,8 @@
     console.log(groups);
     
     var csv = ['Count', 'Name', 'Expansion', 'Condition', 'Language', 'Foil', 'PucaID', 'Status'].join('\t');
-    for (var i=0; i<groups.length; i++){
-      var group = groups[i];
+    for (var key in groups){
+      var group = groups[key];
       var card = group[0];
       var quantity = group.length;
       var row = [quantity, card.cardName, card.setName, card.condition, card.language, card.isFoil, '', card.isTradable];
