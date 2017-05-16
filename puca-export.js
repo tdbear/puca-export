@@ -40,6 +40,7 @@
         
     }
     
+    console.log(cards);
     var groups = _.groupBy(cards, function(c){ return JSON.stringify(c); });
     console.log(groups);
     
