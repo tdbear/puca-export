@@ -22,7 +22,7 @@
     var $cards = $('.item.clear');
     
     var cards = [];
-    for (var i=1; i<$cards.length; i++) {
+    for (var i = 0; i < $cards.length; i++) {
         var $card = $($cards[i]);
       
         var card = {
@@ -34,7 +34,10 @@
           condition: conditionMap[$card.find('.condition select option:selected').text()]
         };
       
-        cards.push(card);
+        if(card.cardname && card.setName) {
+          cards.push(card);
+        }
+        
     }
     
     var groups = _.groupBy(cards, function(c){ return JSON.stringify(c); });
