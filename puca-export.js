@@ -59,7 +59,8 @@
     
     $('<a/>',{
       href:'data:text/csv;charset=utf-8,' + escape(csv),
-      class: 'btn'
+      class: 'btn',
+      download: 'Pucatrade Haves ' + (new Date()) + '.csv'
     }).css({
       position: 'fixed',
       left: '20px',
