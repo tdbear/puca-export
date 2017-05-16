@@ -34,7 +34,7 @@
           condition: conditionMap[$card.find('.condition select option:selected').text()]
         };
       
-        if(card.cardname && card.setName) {
+        if(card.cardName && card.setName) {
           cards.push(card);
         }
         
