@@ -23,7 +23,7 @@
         cards.push(card);
     }
     
-    var countedCards = _.countBy(cards, function(c){ return c; });
+    var groups = _.groupBy(cards, function(c){ return JSON.stringify(c); });
     console.log(countedCards);
     
     
