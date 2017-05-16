@@ -35,7 +35,7 @@
       csv = csv + '\n' + row.join('\t');
     }
     
-    window.open('data:text/csv;charset=utf-8,' + escape(csv));
+    window.open('data:text/csv;charset=utf-8,' + escape(csv), '_self');
     
   };
   
