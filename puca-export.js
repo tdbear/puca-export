@@ -16,6 +16,10 @@
     false: 'NOT FOR TRADE',
   };
   
+  var quote = function(s){
+    return '"' + s + '"';
+  };
+  
   var doExport = function() {
     console.log('exporting');
     
@@ -44,13 +48,13 @@
     var groups = _.groupBy(cards, function(c){ return JSON.stringify(c); });
     console.log(groups);
     
-    var csv = ['Count', 'Name', 'Expansion', 'Condition', 'Language', 'Foil', 'PucaID', 'Status'].join('\t');
+    var csv = ['Count', 'Name', 'Expansion', 'Condition', 'Language', 'Foil', 'PucaID', 'Status'].join(',');
     for (var key in groups){
       var group = groups[key];
       var card = group[0];
       var quantity = group.length;
-      var row = [quantity, card.cardName, card.setName, card.condition, card.language, card.isFoil, '', card.isTradable];
-      csv = csv + '\n' + row.join('\t');
+      var row = [quantity, quote(card.cardName), quote(card.setName), card.condition, card.language, card.isFoil, '', card.isTradable];
+      csv = csv + '\n' + row.join(',');
     }
     
     $('<a/>',{
