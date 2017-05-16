@@ -5,13 +5,14 @@
   var doExport = function() {
     console.log('exporting');
     
-    var $cards = $('.item.clear').find('a[data-card_id]');
+    var $cards = $('.item.clear');
     
     for (var i=1; i<$cards.length; i++) {
         var $card = $($cards[i]);
       
         var card = {
-          name: $card.find('.set select option:selected').text(),
+          cardName: $card.find('a[data-card_id]').text(),
+          setName: $card.find('.set select option:selected').text(),
           isTradable: $card.find('.trade .btn-tab').hasClass('active-button-2'),
           isFoil: $card.find('.foil select option:selected').val() == 1,
           language: $card.find('.language select option:selected').text(),
