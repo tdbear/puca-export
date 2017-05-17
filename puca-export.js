@@ -77,15 +77,15 @@
   };
 
   var loadOrExport = function () {
+    collectCards();
+    
     var $more = $("a:contains('LOAD MORE')");
     if ($more.length == 1) {
       // no more load button
       doExport();
       return;
     }
-
-    collectCards();
-
+    
     console.log('expanding page');
     var evt = new Event("click", { "bubbles": true, "cancelable": true });
     $more[0].dispatchEvent(evt);
