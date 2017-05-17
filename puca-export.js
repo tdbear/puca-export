@@ -51,14 +51,14 @@
 
     var groups = _.groupBy(cards, function (c) { return JSON.stringify(c); });
 
-    var csv = [['Count', 'Name', 'Expansion', 'Condition', 'Language', 'Foil', 'PucaID', 'Status', '\n'].join(',')];
+    var csv = [['Count', 'Name', 'Expansion', 'Condition', 'Language', 'Foil', 'PucaID', 'Status'].join(',') + '\n'];
     for (var key in groups) {
       var group = groups[key];
       var card = group[0];
       var quantity = group.length;
       group.length = 0; // a bit of cleanup
-      var row = [quantity, quote(card.cardName), quote(card.setName), card.condition, card.language, card.isFoil, '', card.isTradable, '\n'];
-      csv.push(row.join(','));
+      var row = [quantity, quote(card.cardName), quote(card.setName), card.condition, card.language, card.isFoil, '', card.isTradable];
+      csv.push(row.join(',') + '\n');
     }
 
     var blob = new Blob(csv, { type: 'text/csv' });
